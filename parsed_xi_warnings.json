@@ -1,0 +1,867 @@
+{
+  "raw_messages": [
+    {
+      "warning_id": "NAVAREA XI 0449/26",
+      "source_id": "kaiho-navarea-xi",
+      "subject_header": "NAVAREA XI NO.26-0449",
+      "full_raw_text": "NO.26-0449       Date:2026/10/08 09 UTC\nNORTH PACIFIC, MARSHALLS.\nDERELICT BARGE ADRIFT IN VICINITY OF\n05-05.8N 166-33.5E AT 072210Z OCT.\nCANCEL THIS MSG 102210Z OCT.",
+      "received_timestamp": "2026-10-09T10:31:57.915071+00:00",
+      "checksum_sha256": "d05a5667421b05d3e1ad2430c70fbd0e35ab66a071721feb5164be617a08c133"
+    },
+    {
+      "warning_id": "NAVAREA XI 0448/26",
+      "source_id": "kaiho-navarea-xi",
+      "subject_header": "NAVAREA XI NO.26-0448",
+      "full_raw_text": "NO.26-0448       Date:2026/10/08 03 UTC\nTAIWAN STRAIT.\nSUBMARINE CABLE REPAIRING WORKS BY\nC/S ILE DE RE UNTIL FURTHER NOTICE.\nIN VICINITY OF LINE JOINING\n24-04.12N 118-46.48E\n24-03.82N 118-46.95E\n23-51.56N 119-01.84E\n23-51.18N 119-02.22E.",
+      "received_timestamp": "2026-10-09T10:31:57.915071+00:00",
+      "checksum_sha256": "6ee6a11855fc40e2a191a82f3b2d0387e507efc9d56f5300c1a96d25fda47f08"
+    },
+    {
+      "warning_id": "NAVAREA XI 0445/26",
+      "source_id": "kaiho-navarea-xi",
+      "subject_header": "NAVAREA XI NO.26-0445",
+      "full_raw_text": "NO.26-0445       Date:2026/10/05 12 UTC\nSULU SEA.\nSPACE DEBRIS.\n091700Z TO 092300Z OCT. AREA BOUNDED BY\n08-57.0N 119-36.0E 08-45.0N 119-19.8E\n09-16.2N 118-57.0E 09-28.2N 119-12.6E.\nCANCEL THIS MSG 100000Z OCT.",
+      "received_timestamp": "2026-10-09T10:31:57.915071+00:00",
+      "checksum_sha256": "fbb0a6b1b4faf18c3fbe65d4cd795ca960762b12ed2a50447bdfb2c3aaaa3d5b"
+    },
+    {
+      "warning_id": "NAVAREA XI 0444/26",
+      "source_id": "kaiho-navarea-xi",
+      "subject_header": "NAVAREA XI NO.26-0444",
+      "full_raw_text": "NO.26-0444       Date:2026/10/04 12 UTC\nNORTH PACIFIC, MARSHALLS.\nHAZARDOUS OPERATION. 090600Z TO 091242Z\nOCT, ALTERNATE 100600Z TO 101242Z OCT.\nAREA BOUNDED BY\n09-30N 167-29E 09-46N 167-55E\n09-20N 168-12E 08-55N 167-33E\n09-16N 167-21E 09-23N 167-33E.\nCANCEL THIS MSG 101342Z OCT.",
+      "received_timestamp": "2026-10-09T10:31:57.915071+00:00",
+      "checksum_sha256": "d07729cc47e520707ae831e74101e081e01660c18fb5dcf93400b51d2b0006d1"
+    },
+    {
+      "warning_id": "NAVAREA XI 0443/26",
+      "source_id": "kaiho-navarea-xi",
+      "subject_header": "NAVAREA XI NO.26-0443",
+      "full_raw_text": "NO.26-0443       Date:2026/10/03 12 UTC\nNAVAREA XI WARNING MESSAGES IN FORCE\n031200Z OCT. ONLY THOSE MESSAGES ISSUED\nDURING LAST SIX WEEKS ARE LISTED HEREIN.\n0386 0387 0398 0400 0401 0408 0426 0428\n0430 0433 0438 0439/26.\nTHE COMPLETE TEXT OF ALL IN FORCE\nNAVAREA XI WARNINGS ARE AVAILABLE FROM\nTHE JHOD WEBSITE \"HTTPS://WWW1.KAIHO.\nMLIT.GO.JP/JHD-E.HTML\" (ONLY \"E\" OF\nADDRESSING IS A CAPITAL LETTER).\nCANCEL 0434/26.",
+      "received_timestamp": "2026-10-09T10:31:57.916084+00:00",
+      "checksum_sha256": "d70a03f40f7bf63e2cfcd51e3c03e28f6246db2b828f4b65753426f4bcc0f6ff"
+    },
+    {
+      "warning_id": "NAVAREA XI 0433/26",
+      "source_id": "kaiho-navarea-xi",
+      "subject_header": "NAVAREA XI NO.26-0433",
+      "full_raw_text": "NO.26-0433       Date:2026/09/28 00 UTC\nNORTH PACIFIC, MARIANAS.\nSUBMARINE CABLE RECOVERY WORKS BY\nM/V ANIEK, 1008 TONS, UNTIL FURTHER\nNOTICE.\nIN VICINITY OF LINE JOINING\n11-52N 146-04E 11-13N 146-59E\n11-18N 147-29E 11-10N 147-39E.\nCANCEL 0432/26.",
+      "received_timestamp": "2026-10-09T10:31:57.916084+00:00",
+      "checksum_sha256": "e1eb211e97430238b2a7d4a12bdfe97ec120be8cdf1f27babc0d3c7aaf8a8348"
+    },
+    {
+      "warning_id": "NAVAREA XI 0430/26",
+      "source_id": "kaiho-navarea-xi",
+      "subject_header": "NAVAREA XI NO.26-0430",
+      "full_raw_text": "NO.26-0430       Date:2026/09/26 12 UTC\nNORTH PACIFIC, NANPO SHOTO.\nGUNNERY. 2300Z TO 0900Z COMMENCING DAILY\n30 SEP TO 30 OCT. AREA BOUNDED BY\n28-15-15N 146-29-47E\n25-25-16N 147-37-47E\n25-00-16N 145-35-48E\n27-55-15N 144-57-48E.\nCANCEL THIS MSG 311000Z OCT.",
+      "received_timestamp": "2026-10-09T10:31:57.916084+00:00",
+      "checksum_sha256": "dbd0971fe081d3a421a5f381928a45bf3fbe8bda40f4f43b0187b9ffaf41b0aa"
+    },
+    {
+      "warning_id": "NAVAREA XI 0428/26",
+      "source_id": "kaiho-navarea-xi",
+      "subject_header": "NAVAREA XI NO.26-0428",
+      "full_raw_text": "NO.26-0428       Date:2026/09/25 12 UTC\nSINGAPORE STRAIT.\nSUBMARINE CABLE REPAIRING WORKS BY\nC/V PETER FABER, 23 SEP TO UNTIL\nFURTHER NOTICE. IN VICINITY OF\n01-16.75N 104-08.14E.\nCANCEL 0412/26 AND 0423/26.",
+      "received_timestamp": "2026-10-09T10:31:57.916084+00:00",
+      "checksum_sha256": "43aedac29c4922a83deacae353ab7badcb362a50ee250123eed90caefd1ffb2f"
+    },
+    {
+      "warning_id": "NAVAREA XI 0426/26",
+      "source_id": "kaiho-navarea-xi",
+      "subject_header": "NAVAREA XI NO.26-0426",
+      "full_raw_text": "NO.26-0426       Date:2026/09/24 00 UTC\nSOUTH CHINA SEA. NORTHERN PART.\nSUBMARINE PIPELINE WORKS BY\nM/V FORTITUDE. UNTIL 08 OCT 2026.\nIN VICINITY OF\nA.11-38.23N 118-56.36E.\nB.11-34.10N 118-53.54E.\nCANCEL THIS MSG 091600Z OCT.",
+      "received_timestamp": "2026-10-09T10:31:57.916084+00:00",
+      "checksum_sha256": "7cb7649317e5bd287480f788a0a70c88eb37e853a2b76179e3e4ee81244d2b4b"
+    },
+    {
+      "warning_id": "NAVAREA XI 0408/26",
+      "source_id": "kaiho-navarea-xi",
+      "subject_header": "NAVAREA XI NO.26-0408",
+      "full_raw_text": "NO.26-0408       Date:2026/09/13 14 UTC\nJAVA SEA.\nSUNKEN WRECK, EXISTS IN 04-32-31.8S\n114-01-36.0E.",
+      "received_timestamp": "2026-10-09T10:31:57.916084+00:00",
+      "checksum_sha256": "8547d15ca3b3b9fe3cf579ea25372761771ec6ae63f9e18f500751667ddc8e80"
+    },
+    {
+      "warning_id": "NAVAREA XI 0401/26",
+      "source_id": "kaiho-navarea-xi",
+      "subject_header": "NAVAREA XI NO.26-0401",
+      "full_raw_text": "NO.26-0401       Date:2026/09/08 02 UTC\n080200UTC ISSUED AT 080200UTC SEP 2026\nVOLCANIC WARNING\nVOLCANO NAME:NISHINO SHIMA\nLOCATION:27-14.6N 140-52.7E INFLUENCE OF\nERUPTION IS EXPECTED WARNING WITHIN A\nRADIUS OF 0.6 MILES.\nCANCEL 0488/20.",
+      "received_timestamp": "2026-10-09T10:31:57.916084+00:00",
+      "checksum_sha256": "2f7d79425a6835fc8fd8e2ab54a22038cff6823230629512d9aa8a237badd217"
+    },
+    {
+      "warning_id": "NAVAREA XI 0400/26",
+      "source_id": "kaiho-navarea-xi",
+      "subject_header": "NAVAREA XI NO.26-0400",
+      "full_raw_text": "NO.26-0400       Date:2026/09/07 20 UTC\nNORTH PACIFIC, MARIANAS.\nGUAM HF NAVTEX STATION, V,\n13-29.0N 144-50.0E, OFF AIR.",
+      "received_timestamp": "2026-10-09T10:31:57.916084+00:00",
+      "checksum_sha256": "c800e7eba3f3d316de9b5197a248e8f5b042422c7c22a271cbf8ae9ca5ae30ce"
+    },
+    {
+      "warning_id": "NAVAREA XI 0398/26",
+      "source_id": "kaiho-navarea-xi",
+      "subject_header": "NAVAREA XI NO.26-0398",
+      "full_raw_text": "NO.26-0398       Date:2026/09/07 12 UTC\nNORTH PACIFIC, NANPO SHOTO.\nCHICHI SHIMA, FUTAMI KO NR.3 LIGHT BUOY,\n27-04.9N 142-11.2E, L.L. VOL 1. 3225,\nEXTINGUISHED AND TEMPORARY LIGHT SET,\nFL G 4 SEC.\nCANCEL 0355/26.",
+      "received_timestamp": "2026-10-09T10:31:57.916084+00:00",
+      "checksum_sha256": "63ce114c72fa1b4e64f74858f13fe75e39c9d2b9fe37daf4a4a89665d4b493bf"
+    },
+    {
+      "warning_id": "NAVAREA XI 0387/26",
+      "source_id": "kaiho-navarea-xi",
+      "subject_header": "NAVAREA XI NO.26-0387",
+      "full_raw_text": "NO.26-0387       Date:2026/08/24 10 UTC\nPHILIPPINES.\nAPO ISLAND LIGHT, 09-04.98N 123-16.22E,\nF2344, EXTINGUSHED.",
+      "received_timestamp": "2026-10-09T10:31:57.916084+00:00",
+      "checksum_sha256": "fc58a9213ff9cfaddfba4dda779fe07df806e69fed2f6c0e7071014548fceeac"
+    },
+    {
+      "warning_id": "NAVAREA XI 0386/26",
+      "source_id": "kaiho-navarea-xi",
+      "subject_header": "NAVAREA XI NO.26-0386",
+      "full_raw_text": "NO.26-0386       Date:2026/08/24 03 UTC\nJAVA SEA.\nSUNKEN WRECK, EXISTS IN 04-14-42S\n113-44-18E.",
+      "received_timestamp": "2026-10-09T10:31:57.916084+00:00",
+      "checksum_sha256": "a63c5a27f61110c4de7c2db7e2706bfec5e5fdaef81f3427ca8e303ae7b21f3f"
+    },
+    {
+      "warning_id": "NAVAREA XI 0356/26",
+      "source_id": "kaiho-navarea-xi",
+      "subject_header": "NAVAREA XI NO.26-0356",
+      "full_raw_text": "NO.26-0356       Date:2026/08/06 00 UTC\nGULF OF THAILAND AND SOUTH CHINA SEA,\nSOUTHERN PART.\nSEISMIC SURVEY WORKS BY M/V PXGEO 2\nTOWING EIGHT CABLES, EACH 5 MILE LONG.\nUNTIL 31 DEC 2026. AREA BOUNDED BY\n06-33N 103-25E 06-50N 102-58E\n06-55N 103-14E 07-02N 103-04E\n06-50N 102-21E 06-28N 102-09E\n05-54N 103-01E.\nCANCEL THIS MSG 01 JAN 2027.",
+      "received_timestamp": "2026-10-09T10:31:57.916084+00:00",
+      "checksum_sha256": "a3f524168975dff62eaae7ad639de002968fa724781b5ed69cc038a3905b06ee"
+    },
+    {
+      "warning_id": "NAVAREA XI 0328/26",
+      "source_id": "kaiho-navarea-xi",
+      "subject_header": "NAVAREA XI NO.26-0328",
+      "full_raw_text": "NO.26-0328       Date:2026/07/21 12 UTC\nNORTH PACIFIC, WEST CAROLINES.\nMALAKAL HARBOR NR.1 LIGHTED BOUY,\n07-19.17N 134-27.17E, MISSING.",
+      "received_timestamp": "2026-10-09T10:31:57.916084+00:00",
+      "checksum_sha256": "9230fed096a4efb46dd05aaaa6911eb1f3bea9e8a6aeec442cf0650aef1ef946"
+    },
+    {
+      "warning_id": "NAVAREA XI 0322/26",
+      "source_id": "kaiho-navarea-xi",
+      "subject_header": "NAVAREA XI NO.26-0322",
+      "full_raw_text": "NO.26-0322       Date:2026/07/16 18 UTC\nNORTH PACIFIC, MARIANAS.\nDISCOLOURED WATER REPORTED IN VICINITY\nOF 20-26.0N 145-01.0E AT 160013Z JUL.\nCANCEL 0020/24.",
+      "received_timestamp": "2026-10-09T10:31:57.916084+00:00",
+      "checksum_sha256": "f9dcdc9d94596c42dbc26b3ed433c28f2d4faed15b1ceba2d1b68fed4264aaea"
+    },
+    {
+      "warning_id": "NAVAREA XI 0273/26",
+      "source_id": "kaiho-navarea-xi",
+      "subject_header": "NAVAREA XI NO.26-0273",
+      "full_raw_text": "NO.26-0273       Date:2026/06/21 04 UTC\nSINGAPORE STRAIT.\nBATU BERHANTI ISOLATED DANGER MARKS\nLIGHT BUOY, 01-11.76N 103-52.51E,\nTEMPORARILY REMOVED.",
+      "received_timestamp": "2026-10-09T10:31:57.916084+00:00",
+      "checksum_sha256": "b12426dc8a8b6ddba9c1a3e85b2096a2970d1b9451c05f80b7aab12f97fbafee"
+    },
+    {
+      "warning_id": "NAVAREA XI 0034/26",
+      "source_id": "kaiho-navarea-xi",
+      "subject_header": "NAVAREA XI NO.26-0034",
+      "full_raw_text": "NO.26-0034       Date:2026/01/27 09 UTC\nSELAT MAKASAR.\nSEISMIC SURVEY WORKS BY S/V RAMFORM\nSOVEREIGN TOWING TWELVE CABLES, EACH\n10050 METRE LONG. UNTIL FURTHER NOTICE.\nAREA BOUNDED BY 00-10.3S 117-49.0E\n00-10.3S 117-50.2E 00-52.5S 117-50.2E\n01-30.6S 117-26.9E 01-33.7S 117-31.8E\n01-44.2S 117-25.4E 01-50.3S 117-36.3E\n01-55.3S 117-45.7E 01-23.4S 118-03.7E\n01-20.8S 117-59.4E 01-16.5S 118-00.7E\n01-16.5S 118-08.6E 01-33.6S 118-08.6E\n01-33.6S 118-33.5E 00-47.9S 118-33.7E\n00-48.0S 118-27.7E 00-14.0N 118-28.0E\n00-14.0N 118-10.1E 00-31.9N 118-10.1E\n00-32.0N 117-47.8E.",
+      "received_timestamp": "2026-10-09T10:31:57.917085+00:00",
+      "checksum_sha256": "ebf39d6a5c2571fac7de4fc6bd26c38e148b8a0f51c10f10a9abafa0b6a35b15"
+    }
+  ],
+  "nav_warnings": [
+    {
+      "warning_id": "NAVAREA XI 0449/26",
+      "source_id": "kaiho-navarea-xi",
+      "navarea": "XI",
+      "title": "NORTH PACIFIC, MARSHALLS.",
+      "issued_text": "2026/10/08 09 UTC",
+      "coordinates": "05-05.8N 166-33.5E",
+      "latitude": 5.096667,
+      "longitude": 166.558333,
+      "category": "drifting",
+      "status": "active",
+      "raw_text": "NO.26-0449       Date:2026/10/08 09 UTC\nNORTH PACIFIC, MARSHALLS.\nDERELICT BARGE ADRIFT IN VICINITY OF\n05-05.8N 166-33.5E AT 072210Z OCT.\nCANCEL THIS MSG 102210Z OCT."
+    },
+    {
+      "warning_id": "NAVAREA XI 0448/26",
+      "source_id": "kaiho-navarea-xi",
+      "navarea": "XI",
+      "title": "TAIWAN STRAIT.",
+      "issued_text": "2026/10/08 03 UTC",
+      "coordinates": "24-04.12N 118-46.48E, 24-03.82N 118-46.95E, 23-51.56N 119-01.84E, 23-51.18N 119-02.22E",
+      "latitude": 23.961167,
+      "longitude": 118.906208,
+      "category": "subsea",
+      "status": "active",
+      "raw_text": "NO.26-0448       Date:2026/10/08 03 UTC\nTAIWAN STRAIT.\nSUBMARINE CABLE REPAIRING WORKS BY\nC/S ILE DE RE UNTIL FURTHER NOTICE.\nIN VICINITY OF LINE JOINING\n24-04.12N 118-46.48E\n24-03.82N 118-46.95E\n23-51.56N 119-01.84E\n23-51.18N 119-02.22E."
+    },
+    {
+      "warning_id": "NAVAREA XI 0445/26",
+      "source_id": "kaiho-navarea-xi",
+      "navarea": "XI",
+      "title": "SULU SEA.",
+      "issued_text": "2026/10/05 12 UTC",
+      "coordinates": "08-57.0N 119-36.0E, 08-45.0N 119-19.8E, 09-16.2N 118-57.0E, 09-28.2N 119-12.6E",
+      "latitude": 9.11,
+      "longitude": 119.2725,
+      "category": "drifting",
+      "status": "active",
+      "raw_text": "NO.26-0445       Date:2026/10/05 12 UTC\nSULU SEA.\nSPACE DEBRIS.\n091700Z TO 092300Z OCT. AREA BOUNDED BY\n08-57.0N 119-36.0E 08-45.0N 119-19.8E\n09-16.2N 118-57.0E 09-28.2N 119-12.6E.\nCANCEL THIS MSG 100000Z OCT."
+    },
+    {
+      "warning_id": "NAVAREA XI 0444/26",
+      "source_id": "kaiho-navarea-xi",
+      "navarea": "XI",
+      "title": "NORTH PACIFIC, MARSHALLS.",
+      "issued_text": "2026/10/04 12 UTC",
+      "coordinates": "09-30N 167-29E, 09-46N 167-55E, 09-20N 168-12E, 08-55N 167-33E, 09-16N 167-21E, 09-23N 167-33E",
+      "latitude": 9.361111,
+      "longitude": 167.675,
+      "category": "general",
+      "status": "active",
+      "raw_text": "NO.26-0444       Date:2026/10/04 12 UTC\nNORTH PACIFIC, MARSHALLS.\nHAZARDOUS OPERATION. 090600Z TO 091242Z\nOCT, ALTERNATE 100600Z TO 101242Z OCT.\nAREA BOUNDED BY\n09-30N 167-29E 09-46N 167-55E\n09-20N 168-12E 08-55N 167-33E\n09-16N 167-21E 09-23N 167-33E.\nCANCEL THIS MSG 101342Z OCT."
+    },
+    {
+      "warning_id": "NAVAREA XI 0443/26",
+      "source_id": "kaiho-navarea-xi",
+      "navarea": "XI",
+      "title": "NAVAREA XI WARNING MESSAGES IN FORCE",
+      "issued_text": "2026/10/03 12 UTC",
+      "coordinates": null,
+      "latitude": null,
+      "longitude": null,
+      "category": "general",
+      "status": "active",
+      "raw_text": "NO.26-0443       Date:2026/10/03 12 UTC\nNAVAREA XI WARNING MESSAGES IN FORCE\n031200Z OCT. ONLY THOSE MESSAGES ISSUED\nDURING LAST SIX WEEKS ARE LISTED HEREIN.\n0386 0387 0398 0400 0401 0408 0426 0428\n0430 0433 0438 0439/26.\nTHE COMPLETE TEXT OF ALL IN FORCE\nNAVAREA XI WARNINGS ARE AVAILABLE FROM\nTHE JHOD WEBSITE \"HTTPS://WWW1.KAIHO.\nMLIT.GO.JP/JHD-E.HTML\" (ONLY \"E\" OF\nADDRESSING IS A CAPITAL LETTER).\nCANCEL 0434/26."
+    },
+    {
+      "warning_id": "NAVAREA XI 0433/26",
+      "source_id": "kaiho-navarea-xi",
+      "navarea": "XI",
+      "title": "NORTH PACIFIC, MARIANAS.",
+      "issued_text": "2026/09/28 00 UTC",
+      "coordinates": "11-52N 146-04E, 11-13N 146-59E, 11-18N 147-29E, 11-10N 147-39E",
+      "latitude": 11.3875,
+      "longitude": 147.045833,
+      "category": "subsea",
+      "status": "active",
+      "raw_text": "NO.26-0433       Date:2026/09/28 00 UTC\nNORTH PACIFIC, MARIANAS.\nSUBMARINE CABLE RECOVERY WORKS BY\nM/V ANIEK, 1008 TONS, UNTIL FURTHER\nNOTICE.\nIN VICINITY OF LINE JOINING\n11-52N 146-04E 11-13N 146-59E\n11-18N 147-29E 11-10N 147-39E.\nCANCEL 0432/26."
+    },
+    {
+      "warning_id": "NAVAREA XI 0430/26",
+      "source_id": "kaiho-navarea-xi",
+      "navarea": "XI",
+      "title": "NORTH PACIFIC, NANPO SHOTO.",
+      "issued_text": "2026/09/26 12 UTC",
+      "coordinates": "28-15-15N 146-29-47E, 25-25-16N 147-37-47E, 25-00-16N 145-35-48E, 27-55-15N 144-57-48E",
+      "latitude": 26.650139,
+      "longitude": 146.171528,
+      "category": "military",
+      "status": "active",
+      "raw_text": "NO.26-0430       Date:2026/09/26 12 UTC\nNORTH PACIFIC, NANPO SHOTO.\nGUNNERY. 2300Z TO 0900Z COMMENCING DAILY\n30 SEP TO 30 OCT. AREA BOUNDED BY\n28-15-15N 146-29-47E\n25-25-16N 147-37-47E\n25-00-16N 145-35-48E\n27-55-15N 144-57-48E.\nCANCEL THIS MSG 311000Z OCT."
+    },
+    {
+      "warning_id": "NAVAREA XI 0428/26",
+      "source_id": "kaiho-navarea-xi",
+      "navarea": "XI",
+      "title": "SINGAPORE STRAIT.",
+      "issued_text": "2026/09/25 12 UTC",
+      "coordinates": "01-16.75N 104-08.14E",
+      "latitude": 1.279167,
+      "longitude": 104.135667,
+      "category": "subsea",
+      "status": "active",
+      "raw_text": "NO.26-0428       Date:2026/09/25 12 UTC\nSINGAPORE STRAIT.\nSUBMARINE CABLE REPAIRING WORKS BY\nC/V PETER FABER, 23 SEP TO UNTIL\nFURTHER NOTICE. IN VICINITY OF\n01-16.75N 104-08.14E.\nCANCEL 0412/26 AND 0423/26."
+    },
+    {
+      "warning_id": "NAVAREA XI 0426/26",
+      "source_id": "kaiho-navarea-xi",
+      "navarea": "XI",
+      "title": "SOUTH CHINA SEA. NORTHERN PART.",
+      "issued_text": "2026/09/24 00 UTC",
+      "coordinates": "11-38.23N 118-56.36E, 11-34.10N 118-53.54E",
+      "latitude": 11.637167,
+      "longitude": 118.939333,
+      "category": "subsea",
+      "status": "active",
+      "raw_text": "NO.26-0426       Date:2026/09/24 00 UTC\nSOUTH CHINA SEA. NORTHERN PART.\nSUBMARINE PIPELINE WORKS BY\nM/V FORTITUDE. UNTIL 08 OCT 2026.\nIN VICINITY OF\nA.11-38.23N 118-56.36E.\nB.11-34.10N 118-53.54E.\nCANCEL THIS MSG 091600Z OCT."
+    },
+    {
+      "warning_id": "NAVAREA XI 0408/26",
+      "source_id": "kaiho-navarea-xi",
+      "navarea": "XI",
+      "title": "JAVA SEA.",
+      "issued_text": "2026/09/13 14 UTC",
+      "coordinates": "04-32-31.8S 114-01-36.0E",
+      "latitude": -4.542167,
+      "longitude": 114.026667,
+      "category": "subsea",
+      "status": "active",
+      "raw_text": "NO.26-0408       Date:2026/09/13 14 UTC\nJAVA SEA.\nSUNKEN WRECK, EXISTS IN 04-32-31.8S\n114-01-36.0E."
+    },
+    {
+      "warning_id": "NAVAREA XI 0401/26",
+      "source_id": "kaiho-navarea-xi",
+      "navarea": "XI",
+      "title": "080200UTC ISSUED AT 080200UTC SEP 2026",
+      "issued_text": "2026/09/08 02 UTC",
+      "coordinates": "27-14.6N 140-52.7E",
+      "latitude": 27.243333,
+      "longitude": 140.878333,
+      "category": "general",
+      "status": "active",
+      "raw_text": "NO.26-0401       Date:2026/09/08 02 UTC\n080200UTC ISSUED AT 080200UTC SEP 2026\nVOLCANIC WARNING\nVOLCANO NAME:NISHINO SHIMA\nLOCATION:27-14.6N 140-52.7E INFLUENCE OF\nERUPTION IS EXPECTED WARNING WITHIN A\nRADIUS OF 0.6 MILES.\nCANCEL 0488/20."
+    },
+    {
+      "warning_id": "NAVAREA XI 0400/26",
+      "source_id": "kaiho-navarea-xi",
+      "navarea": "XI",
+      "title": "NORTH PACIFIC, MARIANAS.",
+      "issued_text": "2026/09/07 20 UTC",
+      "coordinates": "13-29.0N 144-50.0E",
+      "latitude": 13.483333,
+      "longitude": 144.833333,
+      "category": "aton",
+      "status": "active",
+      "raw_text": "NO.26-0400       Date:2026/09/07 20 UTC\nNORTH PACIFIC, MARIANAS.\nGUAM HF NAVTEX STATION, V,\n13-29.0N 144-50.0E, OFF AIR."
+    },
+    {
+      "warning_id": "NAVAREA XI 0398/26",
+      "source_id": "kaiho-navarea-xi",
+      "navarea": "XI",
+      "title": "NORTH PACIFIC, NANPO SHOTO.",
+      "issued_text": "2026/09/07 12 UTC",
+      "coordinates": "27-04.9N 142-11.2E",
+      "latitude": 27.081667,
+      "longitude": 142.186667,
+      "category": "aton",
+      "status": "active",
+      "raw_text": "NO.26-0398       Date:2026/09/07 12 UTC\nNORTH PACIFIC, NANPO SHOTO.\nCHICHI SHIMA, FUTAMI KO NR.3 LIGHT BUOY,\n27-04.9N 142-11.2E, L.L. VOL 1. 3225,\nEXTINGUISHED AND TEMPORARY LIGHT SET,\nFL G 4 SEC.\nCANCEL 0355/26."
+    },
+    {
+      "warning_id": "NAVAREA XI 0387/26",
+      "source_id": "kaiho-navarea-xi",
+      "navarea": "XI",
+      "title": "PHILIPPINES.",
+      "issued_text": "2026/08/24 10 UTC",
+      "coordinates": "09-04.98N 123-16.22E",
+      "latitude": 9.083,
+      "longitude": 123.270333,
+      "category": "aton",
+      "status": "active",
+      "raw_text": "NO.26-0387       Date:2026/08/24 10 UTC\nPHILIPPINES.\nAPO ISLAND LIGHT, 09-04.98N 123-16.22E,\nF2344, EXTINGUSHED."
+    },
+    {
+      "warning_id": "NAVAREA XI 0386/26",
+      "source_id": "kaiho-navarea-xi",
+      "navarea": "XI",
+      "title": "JAVA SEA.",
+      "issued_text": "2026/08/24 03 UTC",
+      "coordinates": "04-14-42S 113-44-18E",
+      "latitude": -4.245,
+      "longitude": 113.738333,
+      "category": "subsea",
+      "status": "active",
+      "raw_text": "NO.26-0386       Date:2026/08/24 03 UTC\nJAVA SEA.\nSUNKEN WRECK, EXISTS IN 04-14-42S\n113-44-18E."
+    },
+    {
+      "warning_id": "NAVAREA XI 0356/26",
+      "source_id": "kaiho-navarea-xi",
+      "navarea": "XI",
+      "title": "GULF OF THAILAND AND SOUTH CHINA SEA,",
+      "issued_text": "2026/08/06 00 UTC",
+      "coordinates": "06-33N 103-25E, 06-50N 102-58E, 06-55N 103-14E, 07-02N 103-04E, 06-50N 102-21E, 06-28N 102-09E, 05-54N 103-01E",
+      "latitude": 6.647619,
+      "longitude": 102.885714,
+      "category": "subsea",
+      "status": "active",
+      "raw_text": "NO.26-0356       Date:2026/08/06 00 UTC\nGULF OF THAILAND AND SOUTH CHINA SEA,\nSOUTHERN PART.\nSEISMIC SURVEY WORKS BY M/V PXGEO 2\nTOWING EIGHT CABLES, EACH 5 MILE LONG.\nUNTIL 31 DEC 2026. AREA BOUNDED BY\n06-33N 103-25E 06-50N 102-58E\n06-55N 103-14E 07-02N 103-04E\n06-50N 102-21E 06-28N 102-09E\n05-54N 103-01E.\nCANCEL THIS MSG 01 JAN 2027."
+    },
+    {
+      "warning_id": "NAVAREA XI 0328/26",
+      "source_id": "kaiho-navarea-xi",
+      "navarea": "XI",
+      "title": "NORTH PACIFIC, WEST CAROLINES.",
+      "issued_text": "2026/07/21 12 UTC",
+      "coordinates": "07-19.17N 134-27.17E",
+      "latitude": 7.3195,
+      "longitude": 134.452833,
+      "category": "aton",
+      "status": "active",
+      "raw_text": "NO.26-0328       Date:2026/07/21 12 UTC\nNORTH PACIFIC, WEST CAROLINES.\nMALAKAL HARBOR NR.1 LIGHTED BOUY,\n07-19.17N 134-27.17E, MISSING."
+    },
+    {
+      "warning_id": "NAVAREA XI 0322/26",
+      "source_id": "kaiho-navarea-xi",
+      "navarea": "XI",
+      "title": "NORTH PACIFIC, MARIANAS.",
+      "issued_text": "2026/07/16 18 UTC",
+      "coordinates": "20-26.0N 145-01.0E",
+      "latitude": 20.433333,
+      "longitude": 145.016667,
+      "category": "general",
+      "status": "active",
+      "raw_text": "NO.26-0322       Date:2026/07/16 18 UTC\nNORTH PACIFIC, MARIANAS.\nDISCOLOURED WATER REPORTED IN VICINITY\nOF 20-26.0N 145-01.0E AT 160013Z JUL.\nCANCEL 0020/24."
+    },
+    {
+      "warning_id": "NAVAREA XI 0273/26",
+      "source_id": "kaiho-navarea-xi",
+      "navarea": "XI",
+      "title": "SINGAPORE STRAIT.",
+      "issued_text": "2026/06/21 04 UTC",
+      "coordinates": "01-11.76N 103-52.51E",
+      "latitude": 1.196,
+      "longitude": 103.875167,
+      "category": "aton",
+      "status": "active",
+      "raw_text": "NO.26-0273       Date:2026/06/21 04 UTC\nSINGAPORE STRAIT.\nBATU BERHANTI ISOLATED DANGER MARKS\nLIGHT BUOY, 01-11.76N 103-52.51E,\nTEMPORARILY REMOVED."
+    },
+    {
+      "warning_id": "NAVAREA XI 0034/26",
+      "source_id": "kaiho-navarea-xi",
+      "navarea": "XI",
+      "title": "SELAT MAKASAR.",
+      "issued_text": "2026/01/27 09 UTC",
+      "coordinates": "00-10.3S 117-49.0E, 00-10.3S 117-50.2E, 00-52.5S 117-50.2E, 01-30.6S 117-26.9E, 01-33.7S 117-31.8E, 01-44.2S 117-25.4E, 01-50.3S 117-36.3E, 01-55.3S 117-45.7E, 01-23.4S 118-03.7E, 01-20.8S 117-59.4E, 01-16.5S 118-00.7E, 01-16.5S 118-08.6E, 01-33.6S 118-08.6E, 01-33.6S 118-33.5E, 00-47.9S 118-33.7E, 00-48.0S 118-27.7E, 00-14.0N 118-28.0E, 00-14.0N 118-10.1E, 00-31.9N 118-10.1E, 00-32.0N 117-47.8E",
+      "latitude": -0.913,
+      "longitude": 117.9895,
+      "category": "subsea",
+      "status": "active",
+      "raw_text": "NO.26-0034       Date:2026/01/27 09 UTC\nSELAT MAKASAR.\nSEISMIC SURVEY WORKS BY S/V RAMFORM\nSOVEREIGN TOWING TWELVE CABLES, EACH\n10050 METRE LONG. UNTIL FURTHER NOTICE.\nAREA BOUNDED BY 00-10.3S 117-49.0E\n00-10.3S 117-50.2E 00-52.5S 117-50.2E\n01-30.6S 117-26.9E 01-33.7S 117-31.8E\n01-44.2S 117-25.4E 01-50.3S 117-36.3E\n01-55.3S 117-45.7E 01-23.4S 118-03.7E\n01-20.8S 117-59.4E 01-16.5S 118-00.7E\n01-16.5S 118-08.6E 01-33.6S 118-08.6E\n01-33.6S 118-33.5E 00-47.9S 118-33.7E\n00-48.0S 118-27.7E 00-14.0N 118-28.0E\n00-14.0N 118-10.1E 00-31.9N 118-10.1E\n00-32.0N 117-47.8E."
+    }
+  ],
+  "spatial_features": [
+    {
+      "warning_id": "NAVAREA XI 0449/26",
+      "category": "drifting",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          166.558333,
+          5.096667
+        ]
+      }
+    },
+    {
+      "warning_id": "NAVAREA XI 0448/26",
+      "category": "subsea",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              118.774667,
+              24.068667
+            ],
+            [
+              118.7825,
+              24.063667
+            ],
+            [
+              119.030667,
+              23.859333
+            ],
+            [
+              119.037,
+              23.853
+            ],
+            [
+              118.774667,
+              24.068667
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "warning_id": "NAVAREA XI 0445/26",
+      "category": "drifting",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              119.6,
+              8.95
+            ],
+            [
+              119.33,
+              8.75
+            ],
+            [
+              118.95,
+              9.27
+            ],
+            [
+              119.21,
+              9.47
+            ],
+            [
+              119.6,
+              8.95
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "warning_id": "NAVAREA XI 0444/26",
+      "category": "general",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              167.483333,
+              9.5
+            ],
+            [
+              167.916667,
+              9.766667
+            ],
+            [
+              168.2,
+              9.333333
+            ],
+            [
+              167.55,
+              8.916667
+            ],
+            [
+              167.35,
+              9.266667
+            ],
+            [
+              167.55,
+              9.383333
+            ],
+            [
+              167.483333,
+              9.5
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "warning_id": "NAVAREA XI 0433/26",
+      "category": "subsea",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              146.066667,
+              11.866667
+            ],
+            [
+              146.983333,
+              11.216667
+            ],
+            [
+              147.483333,
+              11.3
+            ],
+            [
+              147.65,
+              11.166667
+            ],
+            [
+              146.066667,
+              11.866667
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "warning_id": "NAVAREA XI 0430/26",
+      "category": "military",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              146.496389,
+              28.254167
+            ],
+            [
+              147.629722,
+              25.421111
+            ],
+            [
+              145.596667,
+              25.004444
+            ],
+            [
+              144.963333,
+              27.920833
+            ],
+            [
+              146.496389,
+              28.254167
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "warning_id": "NAVAREA XI 0428/26",
+      "category": "subsea",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.135667,
+          1.279167
+        ]
+      }
+    },
+    {
+      "warning_id": "NAVAREA XI 0426/26",
+      "category": "subsea",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            118.939333,
+            11.637167
+          ],
+          [
+            118.892333,
+            11.568333
+          ]
+        ]
+      }
+    },
+    {
+      "warning_id": "NAVAREA XI 0408/26",
+      "category": "subsea",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.026667,
+          -4.542167
+        ]
+      }
+    },
+    {
+      "warning_id": "NAVAREA XI 0401/26",
+      "category": "general",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          140.878333,
+          27.243333
+        ]
+      }
+    },
+    {
+      "warning_id": "NAVAREA XI 0400/26",
+      "category": "aton",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.833333,
+          13.483333
+        ]
+      }
+    },
+    {
+      "warning_id": "NAVAREA XI 0398/26",
+      "category": "aton",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.186667,
+          27.081667
+        ]
+      }
+    },
+    {
+      "warning_id": "NAVAREA XI 0387/26",
+      "category": "aton",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.270333,
+          9.083
+        ]
+      }
+    },
+    {
+      "warning_id": "NAVAREA XI 0386/26",
+      "category": "subsea",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.738333,
+          -4.245
+        ]
+      }
+    },
+    {
+      "warning_id": "NAVAREA XI 0356/26",
+      "category": "subsea",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              103.416667,
+              6.55
+            ],
+            [
+              102.966667,
+              6.833333
+            ],
+            [
+              103.233333,
+              6.916667
+            ],
+            [
+              103.066667,
+              7.033333
+            ],
+            [
+              102.35,
+              6.833333
+            ],
+            [
+              102.15,
+              6.466667
+            ],
+            [
+              103.016667,
+              5.9
+            ],
+            [
+              103.416667,
+              6.55
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "warning_id": "NAVAREA XI 0328/26",
+      "category": "aton",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          134.452833,
+          7.3195
+        ]
+      }
+    },
+    {
+      "warning_id": "NAVAREA XI 0322/26",
+      "category": "general",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.016667,
+          20.433333
+        ]
+      }
+    },
+    {
+      "warning_id": "NAVAREA XI 0273/26",
+      "category": "aton",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.875167,
+          1.196
+        ]
+      }
+    },
+    {
+      "warning_id": "NAVAREA XI 0034/26",
+      "category": "subsea",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              117.816667,
+              -0.171667
+            ],
+            [
+              117.836667,
+              -0.171667
+            ],
+            [
+              117.836667,
+              -0.875
+            ],
+            [
+              117.448333,
+              -1.51
+            ],
+            [
+              117.53,
+              -1.561667
+            ],
+            [
+              117.423333,
+              -1.736667
+            ],
+            [
+              117.605,
+              -1.838333
+            ],
+            [
+              117.761667,
+              -1.921667
+            ],
+            [
+              118.061667,
+              -1.39
+            ],
+            [
+              117.99,
+              -1.346667
+            ],
+            [
+              118.011667,
+              -1.275
+            ],
+            [
+              118.143333,
+              -1.275
+            ],
+            [
+              118.143333,
+              -1.56
+            ],
+            [
+              118.558333,
+              -1.56
+            ],
+            [
+              118.561667,
+              -0.798333
+            ],
+            [
+              118.461667,
+              -0.8
+            ],
+            [
+              118.466667,
+              0.233333
+            ],
+            [
+              118.168333,
+              0.233333
+            ],
+            [
+              118.168333,
+              0.531667
+            ],
+            [
+              117.796667,
+              0.533333
+            ],
+            [
+              117.816667,
+              -0.171667
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}
