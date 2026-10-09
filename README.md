@@ -1,81 +1,73 @@
-# ⚓ HELM SCRAPER — NAVAREA NAVAREA XI Sub-Area Ingestion Engine
+# ⚓ HELM SCRAPER — NAVAREA XI Sub-Area Ingestion Engine
 
 [![Production Portal](https://img.shields.io/badge/Production%20Portal-Helm.Warning%20Data%20Bank-0070f3?style=for-the-badge&logo=vercel)](https://helmwarning.vercel.app/)
-[![NAVAREA XI Pipeline](https://img.shields.io/github/actions/workflow/status/alfredpanakkal/NAVAREA-1/NAVAREA XI-sync.yml?branch=main&label=NAVAREA XI%20Pipeline&style=for-the-badge&logo=githubactions)](https://github.com/alfredpanakkal/NAVAREA-1/actions/workflows/NAVAREA XI-sync.yml)
+[![NAVAREA XI Pipeline](https://img.shields.io/github/actions/workflow/status/alfredpanakkal/NAVAREA-XI-JAPAN/navarea-xi-sync.yml?branch=main&label=NAVAREA%20XI%20Pipeline&style=for-the-badge&logo=githubactions)](https://github.com/alfredpanakkal/NAVAREA-XI-JAPAN/actions/workflows/navarea-xi-sync.yml)
 [![Python Version](https://img.shields.io/badge/Python-3.11%2B-blue?style=for-the-badge&logo=python)](https://www.python.org/)
 [![Database](https://img.shields.io/badge/Database-Supabase%20PostgreSQL-3ECF8E?style=for-the-badge&logo=supabase)](https://supabase.com)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
-> **Automated radio navigational warning scraper, deterministic parser, coordinate normalizer, and Supabase synchronizer for the NAVAREA XI Sea and Swedish coastal waters, powering [Helm.Warning](https://helmwarning.vercel.app/).**
+> **Automated radio navigational warning scraper, deterministic parser, coordinate normalizer, and Supabase synchronizer for NAVAREA XI, coordinated by the Japan Coast Guard, powering [Helm.Warning](https://helmwarning.vercel.app/).**
 
 ---
 
 ## 🌊 Overview
 
-The NAVAREA XI Sea is designated as a specialized sub-area under NAVAREA I, coordinated by the **Swedish Maritime Administration (Sjöfartsverket / SMA)**.
+**NAVAREA XI** covers a vast maritime region in the western Pacific Ocean, coordinated by the **Japan Coast Guard**.
 
-This engine harvests official maritime safety broadcasts from [Sjöfartsverket VHF Navigational Warnings](https://navvarn.sjofartsverket.se/en/Navigationsvarningar/VHF), normalizes navigational positions (including polygons, multi-point hazard bounds, and variable decimal precision) into WGS84 coordinates, infers issued years, classifies maritime hazard semantics, and persists data directly into the Helm.Warning Supabase data bank.
+This engine harvests official maritime safety broadcasts from the [Japan Coast Guard Navigational Warnings Portal](https://www1.kaiho.mlit.go.jp/TUHO/keiho/navarea11_en.html), normalizes navigational positions (including Degrees-Minutes-Seconds and decimal minutes) into WGS84 coordinates, infers issued dates, classifies maritime hazard semantics, and persists data directly into the Helm.Warning Supabase data bank.
 
 ---
 
-## 🗺️ NAVAREA NAVAREA XI Coverage
+## 🗺️ NAVAREA XI Coverage
 
-Broadcasts originate across 15 sub-regions:
-- **Skagerrak**
-- **Kattegat**
-- **The Sound**
-- **Lake Vänern and Trollhätte Canal**
-- **Western NAVAREA XI**
-- **Southern NAVAREA XI**
-- **South-eastern NAVAREA XI**
-- **Central NAVAREA XI**
-- **Lake Mälaren and Södertälje Canal**
-- **Northern NAVAREA XI**
-- **Sea of Åland and Archipelago Sea**
-- **Sea of Bothnia**
-- **The Quark**
-- **Bay of Bothnia**
-- **Other lakes and canals**
+Broadcasts originate across various sub-regions in the Western Pacific and Southeast Asia, including:
+- **North Pacific** (e.g., Marianas, Marshalls, Okinotori Shima)
+- **South China Sea**
+- **Taiwan Strait**
+- **Sulu Sea & Celebes Sea**
+- **Singapore & Malacca Straits**
+- **Java Sea**
+- **Japanese Coastal Waters & Nanpo Shoto**
 
 ---
 
 ## 🏗️ Architecture Pipeline
 
 ```
-                 [ Sjöfartsverket Nav Warnings Portal ]
-            (https://navvarn.sjofartsverket.se/en/Navigationsvarningar/VHF)
+            [ Japan Coast Guard CGI Endpoints ]
+       (www1.kaiho.mlit.go.jp/TUHO/keiho/cgi/warnings.cgi)
                                    │
                                    ▼
  ┌─────────────────────────────────────────────────────────────────┐
  │               STAGE 1: EVIDENCE ACQUISITION                     │
- │  NAVAREA XI_scraper.py                                              │
- │  • Public SSR HTML extraction (no CSRF overhead)                │
- │  • Deduplicates regional broadcasts across multiple sub-areas   │
- │  • Emits verbatim text ledger (navarea_NAVAREA XI_warnings.txt)     │
+ │  navarea_xi_scraper.py                                          │
+ │  • Sends POST requests to CGI endpoints to fetch active IDs     │
+ │  • Fetches bulk HTML for all active warnings                    │
+ │  • Emits verbatim text ledger (navarea_xi_warnings.txt)         │
  └────────────────────────────────┬────────────────────────────────┘
                                   │
                                   ▼
  ┌─────────────────────────────────────────────────────────────────┐
  │               STAGE 2: DETERMINISTIC REGEX PARSER               │
- │  NAVAREA XI_parser.py                                               │
- │  • Variable precision coordinate regex (\d{1,3} decimals)       │
+ │  navarea_xi_parser.py                                           │
+ │  • Handles Degrees-Minutes-Seconds & Decimal Minute coordinates │
  │  • Centroid & GeoJSON bounding box polygon computation          │
- │  • Issued year temporal inference (e.g., 168/26 ➔ 2026)         │
+ │  • Date extraction and temporal inference                       │
  │  • Hazard semantic categorization (military, aton, subsea, etc.)│
  │  • SHA-256 cryptographic bulletin auditing                      │
- │  • Emits structured payload (parsed_warnings.json)              │
+ │  • Emits structured payload (parsed_xi_warnings.json)           │
  └────────────────────────────────┬────────────────────────────────┘
                                   │
                                   ▼
  ┌─────────────────────────────────────────────────────────────────┐
  │               STAGE 3: SMART DIFFERENTIAL SYNC                  │
- │  supabase_sync.py                                               │
+ │  navarea_xi_sync.py                                             │
  │  • Pre-sync Supabase state inspection                           │
  │  • SKIPS unchanged bulletins (zero redundant DB writes)         │
  │  • INSERTS new bulletins into public.raw_messages               │
  │  • UPSERTS new/revised bulletins into public.nav_warnings       │
  │  • MARKS status='cancelled' for expired/dropped bulletins       │
- │    (source_id: 'sma-NAVAREA XI-subarea', navarea: 'NAVAREA XI')         │
+ │    (source_id: 'kaiho-navarea-xi', navarea: 'XI')               │
  └────────────────────────────────┬────────────────────────────────┘
                                   │
                                   ▼
@@ -91,8 +83,8 @@ Broadcasts originate across 15 sub-regions:
 ## 💾 Database Integration Contract
 
 Fully aligned with the Helm.Warning data bank specification:
-- **`source_id`**: `'sma-NAVAREA XI-subarea'` (matches [`sourcesRegistry.ts`](../navwaarning%20sep2026/src/data/sourcesRegistry.ts))
-- **`navarea`**: `'NAVAREA XI'` (matches [`types.ts`](../navwaarning%20sep2026/src/types.ts))
+- **`source_id`**: `'kaiho-navarea-xi'` (matches `sourcesRegistry.ts`)
+- **`navarea`**: `'XI'` (matches `types.ts`)
 
 ### Composite Uniqueness:
 - `public.raw_messages`: `(warning_id, source_id, checksum_sha256)`
@@ -104,11 +96,11 @@ Fully aligned with the Helm.Warning data bank specification:
 
 | Category | Keywords & Terminology | Sample NAVAREA XI Findings |
 | :--- | :--- | :--- |
-| `military` | `DETONATIONS`, `FIRING`, `GUNNERY`, `ARMED FORCES`, `NAVAL EXERCISES` | Lysekil detonations (`168/26`), Central NAVAREA XI exercises (`029/26`) |
-| `aton` | `LIGHT`, `LIGHTS`, `BUOY`, `RACON`, `BEACON`, `UNLIT`, `EXTINGUISHED` | Donsö Svartskär unlit (`156/26`), Dalbolandet lights (`159/26`) |
-| `subsea` | `PIPELINE`, `CABLE`, `SEISMIC`, `DREDGING`, `ANCHOR`, `CHAIN LOST` | Kärsön pipeline (`160/26`), Luleå lost anchor & chain (`165/26`) |
-| `electronic` | `GNSS`, `DGPS`, `AIS INTERFERENCE`, `RADAR INTERFERENCE`, `JAMMING` | NAVAREA XI-wide GNSS/AIS interference alert (`026/25`) |
-| `drifting` | `DRIFTING`, `DERELICT`, `MINE`, `CONTAINER` | Adrift navigation hazards |
+| `military` | `DETONATIONS`, `FIRING`, `GUNNERY`, `NAVAL EXERCISES` | Nanpo Shoto gunnery exercises (`0430/26`) |
+| `aton` | `LIGHT`, `BUOY`, `RACON`, `BEACON`, `UNLIT`, `OFF AIR` | Guam HF NAVTEX off air (`0400/26`), Apo Island light extinguished (`0387/26`) |
+| `subsea` | `PIPELINE`, `CABLE`, `SEISMIC`, `DREDGING`, `SUNKEN WRECK` | Taiwan Strait cable repairs (`0448/26`), Java Sea sunken wreck (`0408/26`) |
+| `electronic` | `GNSS`, `DGPS`, `AIS INTERFERENCE`, `JAMMING` | Electronic interference alerts |
+| `drifting` | `DRIFTING`, `DERELICT`, `MINE`, `ADRIFT`, `SPACE DEBRIS` | Sulu Sea space debris (`0445/26`), Derelict barge in Marshalls (`0449/26`) |
 | `general` | *(Fallback)* | General safety and advisory bulletins |
 
 ---
@@ -134,31 +126,31 @@ export SUPABASE_KEY="your-supabase-key"
 ### 3. Run Pipeline
 ```bash
 # Execute end-to-end pipeline in one command:
-python run_pipeline.py
+python run_xi_pipeline.py
 
 # Or step-by-step:
-python NAVAREA XI_scraper.py   # Harvests navarea_NAVAREA XI_warnings.txt
-python NAVAREA XI_parser.py    # Normalizes & emits parsed_warnings.json
-python supabase_sync.py    # Syncs to Supabase tables
+python navarea_xi_scraper.py   # Harvests navarea_xi_warnings.txt
+python navarea_xi_parser.py    # Normalizes & emits parsed_xi_warnings.json
+python navarea_xi_sync.py      # Syncs to Supabase tables
 ```
 
 ### 4. Run Unit Test Suite
 ```bash
-python -m unittest tests/test_NAVAREA XI.py
+python -m unittest tests/test_navarea_xi.py
 ```
 
 ---
 
 ## 🤖 Cloud Automation (GitHub Actions)
 
-Configured via [`.github/workflows/NAVAREA XI-sync.yml`](./.github/workflows/NAVAREA XI-sync.yml).
+Configured via [`.github/workflows/navarea-xi-sync.yml`](./.github/workflows/navarea-xi-sync.yml).
 
 ### Architecture Decision: No Git Commits in CI
-Initially, the pipeline committed the scraped and parsed JSON/TXT files back to the repository. This is an anti-pattern that causes `git push` race conditions (e.g., `! [rejected] main -> main (fetch first)`) during concurrent workflow runs or when users push manual changes, and it pollutes the repository history.
+Initially, the pipeline committed the scraped and parsed JSON/TXT files back to the repository. This is an anti-pattern that causes `git push` race conditions during concurrent workflow runs.
 
-Instead, the workflow has been upgraded to a **State-Free Sync Engine**:
-1. **GitHub Actions Artifacts:** Temporary output files (`navarea_NAVAREA XI_warnings.txt` and `parsed_warnings.json`) are uploaded directly as pipeline artifacts.
-2. **Supabase Differential Sync:** `supabase_sync.py` connects directly to the production database, diffs the current state, and executes surgical inserts/upserts, making Git entirely unnecessary for data persistence.
+Instead, the workflow operates as a **State-Free Sync Engine**:
+1. **GitHub Actions Artifacts:** Temporary output files (`navarea_xi_warnings.txt` and `parsed_xi_warnings.json`) are uploaded directly as pipeline artifacts.
+2. **Supabase Differential Sync:** `navarea_xi_sync.py` connects directly to the production database, diffs the current state, and executes surgical inserts/upserts, making Git entirely unnecessary for data persistence.
 
 ### CI Configuration
 - **Cron Frequency:** Every 6 hours (`0 */6 * * *`).
