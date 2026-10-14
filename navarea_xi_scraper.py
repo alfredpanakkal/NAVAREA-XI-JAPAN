@@ -1,17 +1,27 @@
 #!/usr/bin/env python3
 """
 navarea_xi_scraper.py — Japan Coast Guard NAVAREA XI Scraper
-Harvests active navigational warnings from the Japan Coast Guard portal using their CGI endpoints,
-with an automatic fallback to the SeaLagom mirror (https://www.sealagom.com/navarea/11/)
-when the JCG site is unreachable or blocks automated access.
+Harvests active navigational warnings from the Japan Coast Guard portal.
+
+Three-tier acquisition strategy (all via curl_cffi with a real Chrome TLS
+fingerprint, since JCG/WAFs block plain python-requests from datacenter IPs):
+  Tier 1: Direct GET of disp_warnings.cgi (no query params; serves the full
+          active NAVAREA XI bulletin list in English, split by <hr>).
+  Tier 2: Classic two-step warnings.cgi XML -> disp_warnings.cgi POST chain.
+  Tier 3: SeaLagom mirror fallback (https://www.sealagom.com/navarea/11/).
+
+NOTE: When using curl_cffi's impersonate="chrome", do NOT override the
+User-Agent header — the TLS/JA3 fingerprint, HTTP/2 settings and sec-ch-ua
+headers must stay consistent to avoid bot-detection blocks.
 """
 
 import sys
 import re
-import requests
 import urllib3
 import xml.etree.ElementTree as ET
 from datetime import datetime
+
+from curl_cffi import requests as cffi_requests
 
 # Ensure UTF-8 output on Windows terminals
 if hasattr(sys.stdout, 'reconfigure'):
@@ -27,11 +37,7 @@ URL_DISP = "https://www1.kaiho.mlit.go.jp/TUHO/keiho/cgi/disp_warnings.cgi"
 # Mirror of the JCG NAVAREA XI bulletins (free full-content page)
 URL_MIRROR = "https://www.sealagom.com/navarea/11/"
 
-HEADERS = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-    "Accept-Language": "en-US,en;q=0.9",
-}
+JCG_ENCODING = "cp932"  # Shift-JIS superset used by JCG pages
 
 
 def _collect_from_text_lines(blocks):
@@ -81,22 +87,53 @@ def _write_output(collected_warnings, output_filename):
             f.write(f"{warn['body']}\n\n")
 
 
-def fetch_from_jcg(year):
-    """Primary source: Japan Coast Guard CGI endpoints. Returns dict of warnings or raises."""
-    print(f"Fetching XML bulletin list for year {year}...")
+def fetch_direct_disp():
+    """Tier 1: Direct GET of disp_warnings.cgi with NO query parameters.
+    Serves the full active NAVAREA XI warnings page in English, blocks
+    separated by <hr>. Returns dict of warnings or raises."""
+    print(f"Tier 1: Direct fetch of {URL_DISP} ...")
+
+    response = cffi_requests.get(
+        URL_DISP,
+        impersonate="chrome",
+        timeout=30,
+        verify=False
+    )
+    response.raise_for_status()
+
+    html_text = response.content.decode(JCG_ENCODING, errors="replace")
+
+    # Preprocess HTML: replace <br> with newlines, strip <STRONG> tags
+    html_text = re.sub(r'<br\s*/?>', '\n', html_text, flags=re.IGNORECASE)
+    html_text = re.sub(r'</?STRONG>', '', html_text, flags=re.IGNORECASE)
+
+    # The messages are separated by <hr> tags
+    blocks = re.split(r'<hr\s*/?>', html_text, flags=re.IGNORECASE)
+    return _collect_from_text_lines(blocks)
+
+
+def fetch_two_step(year):
+    """Tier 2: Classic JCG chain — warnings.cgi (XML IDs) -> disp_warnings.cgi
+    (bulk HTML POST). Returns dict of warnings or raises."""
+    print(f"Tier 2: Fetching XML bulletin list for year {year}...")
 
     # Fetch warning IDs via CGI POST
-    response_xml = requests.post(
+    response_xml = cffi_requests.post(
         URL_WARNINGS,
         data={'YEAR': str(year), 'TYPE': 'NAVAREA11', 'LANG': 'EG'},
-        verify=False,
-        headers=HEADERS,
-        timeout=30
+        impersonate="chrome",
+        timeout=30,
+        verify=False
     )
     response_xml.raise_for_status()
 
+    xml_text = response_xml.content.decode(JCG_ENCODING, errors="replace")
+    # Strip any XML encoding declaration (e.g. encoding="Shift_JIS") that can
+    # break ET.fromstring when the bytes were already decoded.
+    xml_text = re.sub(r'^\s*<\?xml[^>]*\?>', '', xml_text.strip())
+
     # Parse XML to get tana IDs
-    root = ET.fromstring(response_xml.text)
+    root = ET.fromstring(xml_text)
     tanas = [member.find('tana').text for member in root.findall('Member') if member.find('tana') is not None]
 
     if not tanas:
@@ -107,16 +144,16 @@ def fetch_from_jcg(year):
 
     # Fetch bulk HTML via CGI POST
     tana_str = ":".join(tanas) + ":"
-    response_html = requests.post(
+    response_html = cffi_requests.post(
         URL_DISP,
         data={'TYPE': 'NAVAREA11', 'TANA': tana_str, 'LANG': 'EG'},
-        verify=False,
-        headers=HEADERS,
-        timeout=30
+        impersonate="chrome",
+        timeout=30,
+        verify=False
     )
     response_html.raise_for_status()
 
-    html_text = response_html.text
+    html_text = response_html.content.decode(JCG_ENCODING, errors="replace")
 
     # Preprocess HTML: replace <br> with newlines, strip <STRONG> tags
     html_text = re.sub(r'<br\s*/?>', '\n', html_text, flags=re.IGNORECASE)
@@ -128,12 +165,16 @@ def fetch_from_jcg(year):
 
 
 def fetch_from_mirror():
-    """Fallback source: SeaLagom mirror of the JCG NAVAREA XI bulletins. Returns dict or raises."""
-    print(f"Falling back to mirror: {URL_MIRROR}")
-    response = requests.get(URL_MIRROR, headers=HEADERS, timeout=30)
+    """Tier 3: SeaLagom mirror of the JCG NAVAREA XI bulletins. Returns dict or raises."""
+    print(f"Tier 3: Falling back to mirror: {URL_MIRROR}")
+    response = cffi_requests.get(
+        URL_MIRROR,
+        impersonate="chrome",
+        timeout=30
+    )
     response.raise_for_status()
 
-    text = response.text
+    text = response.content.decode("utf-8", errors="replace")
     # Normalise whitespace: warnings on the mirror page are rendered as
     # 'NO.26-0451 Date:2026/10/09 07 UTC <body...>' blocks.
     text = re.sub(r'<br\s*/?>', '\n', text, flags=re.IGNORECASE)
@@ -169,16 +210,29 @@ def scrape_xi_warnings(output_filename="navarea_xi_warnings.txt", year=None):
 
     collected_warnings = {}
 
-    # Stage 1: primary source (JCG CGI)
+    # Tier 1: direct JCG disp_warnings.cgi GET
     try:
-        collected_warnings = fetch_from_jcg(year)
+        collected_warnings = fetch_direct_disp()
+        if collected_warnings:
+            print(f"✅ Tier 1 (direct disp_warnings.cgi) succeeded.")
     except Exception as e:
-        print(f"⚠️ JCG endpoint unavailable: {e}")
+        print(f"⚠️ Tier 1 (direct disp_warnings.cgi) unavailable: {e}")
 
-    # Stage 2: mirror fallback
+    # Tier 2: JCG two-step XML + POST chain
+    if not collected_warnings:
+        try:
+            collected_warnings = fetch_two_step(year)
+            if collected_warnings:
+                print("✅ Tier 2 (JCG two-step chain) succeeded.")
+        except Exception as e:
+            print(f"⚠️ Tier 2 (JCG two-step chain) unavailable: {e}")
+
+    # Tier 3: mirror fallback
     if not collected_warnings:
         try:
             collected_warnings = fetch_from_mirror()
+            if collected_warnings:
+                print("✅ Tier 3 (SeaLagom mirror) succeeded.")
         except Exception as e:
             print(f"❌ Mirror also unavailable: {e}")
 
