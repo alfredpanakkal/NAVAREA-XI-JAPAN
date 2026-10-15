@@ -1,0 +1,56 @@
+=================================================================
+⚡ NAVAREA XI Navigational Warnings Differential Sync Engine
+=================================================================
+
+[1/4] Inspecting current database state for source 'kaiho-navarea-xi'...
+  • Found 30 existing bulletins in 'nav_warnings'
+  • Found 30 distinct audit records in 'raw_messages'
+
+[2/4] Differential Evaluation:
+  • Unchanged (will skip)    : 18
+  • New to add               : 0
+  • Revised to update        : 0
+  • Dropped (mark cancelled) : 12
+  ⏭️ [SKIP] NAVAREA XI 0457/26: Unchanged (already current in Supabase)
+  ⏭️ [SKIP] NAVAREA XI 0456/26: Unchanged (already current in Supabase)
+  ⏭️ [SKIP] NAVAREA XI 0455/26: Unchanged (already current in Supabase)
+  ⏭️ [SKIP] NAVAREA XI 0448/26: Unchanged (already current in Supabase)
+  ⏭️ [SKIP] NAVAREA XI 0433/26: Unchanged (already current in Supabase)
+  ⏭️ [SKIP] NAVAREA XI 0430/26: Unchanged (already current in Supabase)
+  ⏭️ [SKIP] NAVAREA XI 0428/26: Unchanged (already current in Supabase)
+  ⏭️ [SKIP] NAVAREA XI 0408/26: Unchanged (already current in Supabase)
+  ⏭️ [SKIP] NAVAREA XI 0401/26: Unchanged (already current in Supabase)
+  ⏭️ [SKIP] NAVAREA XI 0400/26: Unchanged (already current in Supabase)
+  ⏭️ [SKIP] NAVAREA XI 0398/26: Unchanged (already current in Supabase)
+  ⏭️ [SKIP] NAVAREA XI 0387/26: Unchanged (already current in Supabase)
+  ⏭️ [SKIP] NAVAREA XI 0386/26: Unchanged (already current in Supabase)
+  ⏭️ [SKIP] NAVAREA XI 0356/26: Unchanged (already current in Supabase)
+  ⏭️ [SKIP] NAVAREA XI 0328/26: Unchanged (already current in Supabase)
+  ⏭️ [SKIP] NAVAREA XI 0322/26: Unchanged (already current in Supabase)
+  ⏭️ [SKIP] NAVAREA XI 0273/26: Unchanged (already current in Supabase)
+  ⏭️ [SKIP] NAVAREA XI 0034/26: Unchanged (already current in Supabase)
+
+[3/4] No new or updated bulletins to write. Database writes skipped.
+
+[4/4] Processing 12 cancelled bulletin(s)...
+  ❌ Error marking NAVAREA XI 0449/26 cancelled: {'message': "Could not find the 'updated_at' column of 'nav_warnings' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ❌ Error marking NAVAREA XI 0445/26 cancelled: {'message': "Could not find the 'updated_at' column of 'nav_warnings' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ❌ Error marking NAVAREA XI 0444/26 cancelled: {'message': "Could not find the 'updated_at' column of 'nav_warnings' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ❌ Error marking NAVAREA XI 0443/26 cancelled: {'message': "Could not find the 'updated_at' column of 'nav_warnings' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ❌ Error marking NAVAREA XI 0426/26 cancelled: {'message': "Could not find the 'updated_at' column of 'nav_warnings' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ❌ Error marking NAVAREA XI 0452/26 cancelled: {'message': "Could not find the 'updated_at' column of 'nav_warnings' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ❌ Error marking NAVAREA XI 0451/26 cancelled: {'message': "Could not find the 'updated_at' column of 'nav_warnings' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ❌ Error marking NAVAREA XI 0453/26 cancelled: {'message': "Could not find the 'updated_at' column of 'nav_warnings' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ❌ Error marking NAVAREA XI 0454/26 cancelled: {'message': "Could not find the 'updated_at' column of 'nav_warnings' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ❌ Error marking NAVAREA XI 0460/26 cancelled: {'message': "Could not find the 'updated_at' column of 'nav_warnings' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ❌ Error marking NAVAREA XI 0459/26 cancelled: {'message': "Could not find the 'updated_at' column of 'nav_warnings' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ❌ Error marking NAVAREA XI 0458/26 cancelled: {'message': "Could not find the 'updated_at' column of 'nav_warnings' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+
+=================================================================
+📊 DIFFERENTIAL SYNCHRONIZATION SUMMARY:
+   • Total Harvested  : 18
+   • Skipped          : 18
+   • New Added        : 0
+   • Updated          : 0
+   • Cancelled        : 12
+=================================================================
